@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s(45ayi+=s!q+2__$u3@6jcqlvzatl-_2g2250rkjka(8)j#qp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['52.64.187.169']
+ALLOWED_HOSTS = ['3.26.206.6']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main_app.apps.MainAppConfig',
     'sign_up_app.apps.SignUpAppConfig',
     'login_app.apps.LoginAppConfig',
     'graph_app.apps.GraphAppConfig',
@@ -80,12 +81,11 @@ WSGI_APPLICATION = 'mood_tracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mood-tracker-mysql',
+        'NAME': 'mood_tracker_mysql',
         'USER': 'choeyujeong911',
         'PASSWORD': 'you4958911',
         'HOST': 'mood-tracker-mysql.czisy6k0mq56.ap-southeast-2.rds.amazonaws.com',
         'PORT': '3306',
-        'OPTIONS': { 'init.command': 'SET sql_mode="STRICT_TRANS_TABLES"' }
     }
 }
 
