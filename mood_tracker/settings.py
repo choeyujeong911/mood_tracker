@@ -79,8 +79,13 @@ WSGI_APPLICATION = 'mood_tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mood-tracker-mysql',
+        'USER': 'choeyujeong911',
+        'PASSWORD': 'you4958911',
+        'HOST': 'mood-tracker-mysql.czisy6k0mq56.ap-southeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS': { 'init.command': 'SET sql_mode="STRICT_TRANS_TABLES"' }
     }
 }
 
